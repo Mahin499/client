@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", "Bebas Neue", sans-serif;
+  --font-bebas: "Bebas Neue", "Anton", sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --color-apex-bg: #F3F0EB;
+  --color-apex-dark: #171717;
+  --color-apex-darker: #0E0E0E;
+  --color-apex-black: #111111;
+  --color-apex-border: #D8D5D0;
+  --color-apex-border-dark: #262626;
+  --color-apex-secondary: #777777;
+  --color-apex-bronze: #A58A63;
+  --color-apex-bronze-dark: #8C7351;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F3F0EB;
+  color: #111111;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F0EB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8B5B0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
+
+.font-display {
+  font-family: 'Anton', 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Smooth fade-in animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
